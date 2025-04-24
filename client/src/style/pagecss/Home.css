@@ -1,0 +1,24 @@
+.home-main-container h1{
+    text-align: center;
+    margin: 10px;
+    color: rgb(45, 36, 1);
+}
+
+.todo-add-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly ;
+    width: 100%;
+    padding-top: 10px;
+}
+.text-area{
+    width: 600%;
+    display: flex;
+    right: 150%;
+    padding: 10px;
+}
+.submit-button{
+    display: flex;
+    left: 320%;
+    padding: 20px;
+}
