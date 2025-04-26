@@ -1,6 +1,7 @@
 import React,{useState,useEffect} from 'react';
 import '../style/componenetcss/Header.css'
 import { useNavigate } from 'react-router-dom';
+import {Button} from 'antd';
 import axios from 'axios';
 
 
@@ -53,7 +54,7 @@ const Header = () => {
                 <h1>{name}</h1>
             
                 <nav>
-                    {token ? <button onClick={forLogout}>logout</button> : <> <button onClick={forLogin}>Login</button> <button onClick={forRegister}>Register</button></> }
+                    {token ? <Button type="primary" onClick={forLogout}>logout</Button> : <> <Button type="primary" onClick={forLogin}>Login</Button> <Button type="primary" onClick={forRegister}>Register</Button></> }
                 
             </nav>
             </header>
