@@ -9,7 +9,7 @@ const Login = () => {
 
   const onFinishLogin = async(values) => {
     try {
-      const res = await axios.post('/api/v1/admin/login', values);
+      const res = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/api/v1/admin/login`, values);
       if (res.data.success) {
         localStorage.setItem("token", res.data.token);
         navigate('/');
