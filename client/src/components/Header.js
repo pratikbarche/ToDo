@@ -54,7 +54,7 @@ const Header = () => {
                 <h1>{name}</h1>
             
                 <nav>
-                    {token ? <Button type="primary" onClick={forLogout}>logout</Button> : <> <Button type="primary" onClick={forLogin}>Login</Button> <Button type="primary" onClick={forRegister}>Register</Button></> }
+                    {token ? <Button type='primary' onClick={forLogout}>logout</Button> : <> <Button type='primary' onClick={forLogin}>Login</Button> <Button type='primary' onClick={forRegister}>Register</Button></> }
                 
             </nav>
             </header>
