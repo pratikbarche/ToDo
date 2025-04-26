@@ -10,7 +10,7 @@ const Home = () => {
 
     const fectchTodos = async () => {
         try {
-            const getTodoRes = await axios.get('/api/v1/admin/gettodo', {
+            const getTodoRes = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/api/v1/admin/gettodo`, {
                 headers: {
                     Authorization: "Bearer " + localStorage.getItem('token')
                 }
