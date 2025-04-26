@@ -15,7 +15,7 @@ const Header = () => {
     
     const getUserdata = async () => {
         try {
-            const res = await axios.get('/api/v1/admin/namesetting',{
+            const res = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/api/v1/admin/namesetting`,{
                 headers: {
                     Authorization: "Bearer " + localStorage.getItem('token')
                 }
