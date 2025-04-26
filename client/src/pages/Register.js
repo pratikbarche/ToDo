@@ -9,7 +9,7 @@ const Register = () => {
   const navigate = useNavigate();
   const onFinishRegister = async(values) => {
     try {
-      const res = await axios.post('/api/v1/admin/register', values);
+      const res = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/api/v1/admin/register`, values);
       if (res.data.success) {
         alert("Register Succesfully");
         navigate('/login');
