@@ -27,7 +27,7 @@ const Home = () => {
     }
 
     const finishHandler = async (values) => {
-        const res = await axios.post('/api/v1/admin/upload',values, {headers :{
+        const res = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/api/v1/admin/upload`,values, {headers :{
             Authorization:"Bearer " + localStorage.getItem("token") }
         });
         if (res.data.success) {
@@ -39,7 +39,7 @@ const Home = () => {
 
     const deleteHandler = async (ID) => {
         try {
-            const res = await axios.delete('/api/v1/admin/delete',{
+            const res = await axios.delete(`${process.env.REACT_APP_BACKEND_URL}/api/v1/admin/delete`,{
                 headers: {
                     Authorization: "Bearer " + localStorage.getItem("token")
                 }
